@@ -1,20 +1,13 @@
 "use client";
 
 import React from 'react';
-// 1. Next.js native navigation link 
 import Link from 'next/link'; 
-
-// 2. Clear out any potential named export conflicts from lucide-react
 import { Github, Linkedin, Mail, FileText, ExternalLink, Cpu } from 'lucide-react';
-import dynamic from 'next/dynamic';
-
-// 3. Clean dynamic integration for the calendar
-const GitHubCalendarComponent = dynamic(
-  () => import('react-github-calendar').then((mod) => mod.GitHubCalendar),
-  { ssr: false }
-);
 
 export default function Page() {
+  // Replace this with your exact GitHub username
+  const githubUsername = "silver0cloud"; 
+
   return (
     <div className="min-h-screen bg-[#0b0f19] text-slate-200 font-sans antialiased selection:bg-teal-500/30">
       <main className="max-w-3xl mx-auto px-6 py-16 space-y-20">
@@ -43,9 +36,15 @@ export default function Page() {
 
           {/* Social Links */}
           <div className="flex space-x-4 pt-4 text-slate-400">
-            <Link href="https://github.com" className="hover:text-white transition-colors"><Github size={20} /></Link>
-            <Link href="https://linkedin.com" className="hover:text-white transition-colors"><Linkedin size={20} /></Link>
-            <Link href="mailto:your@email.com" className="hover:text-white transition-colors"><Mail size={20} /></Link>
+            <Link href={`https://github.com/${githubUsername}`} target="_blank" className="hover:text-white transition-colors">
+              <Github size={20} />
+            </Link>
+            <Link href="https://linkedin.com" target="_blank" className="hover:text-white transition-colors">
+              <Linkedin size={20} />
+            </Link>
+            <Link href="mailto:your@email.com" className="hover:text-white transition-colors">
+              <Mail size={20} />
+            </Link>
             <Link href="#" className="inline-flex items-center space-x-1 hover:text-white transition-colors text-sm font-medium">
               <FileText size={18} /> <span>Resume</span>
             </Link>
@@ -90,13 +89,16 @@ export default function Page() {
           </div>
         </section>
 
-        {/* 4. GITHUB ACTIVITY WIDGET */}
+        {/* 4. GITHUB ACTIVITY WIDGET (Clean Dynamic Custom Image) */}
         <section className="space-y-4">
           <h2 className="text-2xl font-bold text-white tracking-tight">GitHub Activity</h2>
-          <div className="p-4 bg-slate-900/30 border border-slate-800 rounded-xl flex justify-center overflow-x-auto">
-            <GitHubCalendarComponent 
-              username="your-github-username" 
-              colorScheme="dark"
+          <div className="p-4 bg-slate-900/30 border border-slate-800 rounded-xl flex justify-center items-center overflow-x-auto">
+            {/* Native API integration that mimics the exact calendar grid flawlessly without dependencies */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img 
+              src={`https://github-readme-stroke-chart.vercel.app/?user=${githubUsername}&theme=dark&background=0b0f19`} 
+              alt="GitHub Contributions Chart"
+              className="w-full max-w-2xl h-auto object-contain"
             />
           </div>
         </section>
