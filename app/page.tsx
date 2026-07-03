@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { Github, Linkedin, Mail, FileText, ExternalLink, Terminal, Layers, Cpu } from 'lucide-react';
 import GitHubCalendar from 'react-github-calendar';
