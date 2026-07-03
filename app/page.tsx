@@ -1,10 +1,14 @@
 "use client";
 
 import React from 'react';
-import { Github, Linkedin, Mail, FileText, ExternalLink, Terminal, Layers, Cpu } from 'lucide-react';
+// 1. Next.js native navigation link 
+import Link from 'next/link'; 
+
+// 2. Clear out any potential named export conflicts from lucide-react
+import { Github, Linkedin, Mail, FileText, ExternalLink, Cpu } from 'lucide-react';
 import dynamic from 'next/dynamic';
 
-// FIX: Wrap inside curly braces to use the correct named export
+// 3. Clean dynamic integration for the calendar
 const GitHubCalendarComponent = dynamic(
   () => import('react-github-calendar').then((mod) => mod.GitHubCalendar),
   { ssr: false }
@@ -39,12 +43,12 @@ export default function Page() {
 
           {/* Social Links */}
           <div className="flex space-x-4 pt-4 text-slate-400">
-            <a href="#" className="hover:text-white transition-colors"><Github size={20} /></a>
-            <a href="#" className="hover:text-white transition-colors"><Linkedin size={20} /></a>
-            <a href="#" className="hover:text-white transition-colors"><Mail size={20} /></a>
-            <a href="#" className="inline-flex items-center space-x-1 hover:text-white transition-colors text-sm font-medium">
+            <Link href="https://github.com" className="hover:text-white transition-colors"><Github size={20} /></Link>
+            <Link href="https://linkedin.com" className="hover:text-white transition-colors"><Linkedin size={20} /></Link>
+            <Link href="mailto:your@email.com" className="hover:text-white transition-colors"><Mail size={20} /></Link>
+            <Link href="#" className="inline-flex items-center space-x-1 hover:text-white transition-colors text-sm font-medium">
               <FileText size={18} /> <span>Resume</span>
-            </a>
+            </Link>
           </div>
         </section>
 
