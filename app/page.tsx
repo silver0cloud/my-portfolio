@@ -2,9 +2,15 @@
 
 import React from 'react';
 import { Github, Linkedin, Mail, FileText, ExternalLink, Terminal, Layers, Cpu } from 'lucide-react';
-import GitHubCalendar from 'react-github-calendar';
+import dynamic from 'next/dynamic';
 
-export default function Portfolio() {
+// FIX: Wrap inside curly braces to use the correct named export
+const GitHubCalendarComponent = dynamic(
+  () => import('react-github-calendar').then((mod) => mod.GitHubCalendar),
+  { ssr: false }
+);
+
+export default function Page() {
   return (
     <div className="min-h-screen bg-[#0b0f19] text-slate-200 font-sans antialiased selection:bg-teal-500/30">
       <main className="max-w-3xl mx-auto px-6 py-16 space-y-20">
@@ -13,14 +19,13 @@ export default function Portfolio() {
         <section className="space-y-4">
           <div className="flex items-center space-x-4">
             <h1 className="text-4xl font-bold tracking-tight text-white">Your Name</h1>
-            <span className="px-2.5 py-0.5 text-xs font-medium bg-teal-500/10 text-teal-400 rounded-full border border-teal-500/20 animate-pulse">
+            <span className="px-2.5 py-0.5 text-xs font-medium bg-teal-500/10 text-teal-400 rounded-full border border-teal-500/20">
               Available for roles
             </span>
           </div>
           <p className="text-xl text-slate-400 font-medium">AI/ML & Backend Developer</p>
           <p className="text-slate-400 leading-relaxed max-w-2xl">
             I build production-ready AI/ML pipelines, custom LLM solutions, and full-stack architectures. 
-            Currently a final-year engineering student focusing on applied deep learning and robust MLOps.
           </p>
           
           {/* Tech Badges */}
@@ -43,7 +48,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* 2. SKILLS / FOCUS AREAS */}
+        {/* 2. CORE EXPERTISE */}
         <section className="space-y-6">
           <h2 className="text-2xl font-bold text-white tracking-tight">Core Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -53,10 +58,9 @@ export default function Portfolio() {
                 <h3 className="font-semibold text-white">AI Engineering & Applied LLMs</h3>
               </div>
               <p className="text-sm text-slate-400 leading-relaxed">
-                Architecting advanced Retrieval-Augmented Generation (RAG), custom model evaluation loops, and autonomous agent workflows.
+                Architecting advanced Retrieval-Augmented Generation (RAG) and semantic indexes.
               </p>
             </div>
-            {/* Add more skill cards here following the same pattern */}
           </div>
         </section>
 
@@ -64,16 +68,12 @@ export default function Portfolio() {
         <section className="space-y-6">
           <h2 className="text-2xl font-bold text-white tracking-tight">Featured Projects</h2>
           <div className="space-y-8">
-            
-            {/* Project Block */}
             <div className="group relative border-l-2 border-slate-800 pl-6 space-y-3 hover:border-teal-500/50 transition-colors">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-white group-hover:text-teal-400 transition-colors flex items-center gap-1.5">
-                  gUrrT — Local Video Intelligence Engine <ExternalLink size={14} />
-                </h3>
-              </div>
+              <h3 className="text-lg font-semibold text-white group-hover:text-teal-400 transition-colors flex items-center gap-1.5">
+                gUrrT — Local Video Intelligence Engine <ExternalLink size={14} />
+              </h3>
               <div className="flex flex-wrap gap-1.5">
-                {['Python', 'llama.cpp', 'ChromaDB', 'FastAPI'].map((t) => (
+                {['Python', 'llama.cpp', 'ChromaDB'].map((t) => (
                   <span key={t} className="text-[11px] font-mono bg-slate-900 px-2 py-0.5 rounded text-slate-400">
                     {t}
                   </span>
@@ -81,10 +81,8 @@ export default function Portfolio() {
               </div>
               <ul className="text-sm text-slate-400 space-y-1.5 list-disc list-inside">
                 <li>Open-source Video-RAG framework with 6K+ PyPI downloads for semantic video understanding.</li>
-                <li>Integrated llama.cpp with quantized GGUF models, speeding up local inference on consumer hardware.</li>
               </ul>
             </div>
-
           </div>
         </section>
 
@@ -92,12 +90,9 @@ export default function Portfolio() {
         <section className="space-y-4">
           <h2 className="text-2xl font-bold text-white tracking-tight">GitHub Activity</h2>
           <div className="p-4 bg-slate-900/30 border border-slate-800 rounded-xl flex justify-center overflow-x-auto">
-            <GitHubCalendar 
+            <GitHubCalendarComponent 
               username="your-github-username" 
               colorScheme="dark"
-              fontSize={12}
-              blockSize={11}
-              blockMargin={4}
             />
           </div>
         </section>
