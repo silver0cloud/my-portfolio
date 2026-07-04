@@ -72,32 +72,46 @@ export default function Page() {
 
         {/* 3. FEATURED PROJECTS */}
         <section className="space-y-6">
-          <h2 className="text-2xl font-bold text-white tracking-tight">Featured Projects</h2>
-          <div className="space-y-8">
-            <div className="group relative border-l-2 border-slate-800 pl-6 space-y-3 hover:border-teal-500/50 transition-colors">
-              <h3 className="text-lg font-semibold text-white group-hover:text-teal-400 transition-colors flex items-center gap-1.5">
-                 AVAVS - Audio Visual Approximation of Video Semantic Space  
-                <svg className="w-3.5 h-3.5 text-slate-500 inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-              </h3>
-              <div className="flex flex-wrap gap-1.5">
-                {['Python', 'Scikit-Learn', 'PyTorch', 'TFlow', 'ImageBind', 'CLIP', 'AudioCLIP'].map((t) => (
-                  <span key={t} className="text-[11px] font-mono bg-slate-900 px-2 py-0.5 rounded text-slate-400">
-                    {t}
-                  </span>
-                ))}
-              </div>
-              <ul className="text-sm text-slate-400 space-y-1.5 list-disc list-inside">
-                <h4>Designed a 𝗺𝘂𝗹𝘁𝗶𝗺𝗼𝗱𝗮𝗹 𝗿𝗲𝗽𝗿𝗲𝘀𝗲𝗻𝘁𝗮𝘁𝗶𝗼𝗻 𝗹𝗲𝗮𝗿𝗻𝗶𝗻𝗴 𝗳𝗿𝗮𝗺𝗲𝘄𝗼𝗿𝗸 that determines whether the 𝘀𝗲𝗺𝗮𝗻𝘁𝗶𝗰 𝗲𝗺𝗯𝗲𝗱𝗱𝗶𝗻𝗴 of a 𝗰𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝘃𝗶𝗱𝗲𝗼 𝘀𝗲𝗾𝘂𝗲𝗻𝗰𝗲 can be accurately approximated using - </h4>
-                <li>A 𝘀𝗶𝗻𝗴𝗹𝗲 𝘀𝘁𝗮𝘁𝗶𝗰 𝘃𝗶𝘀𝘂𝗮𝗹 𝗳𝗿𝗮𝗺𝗲 (or sparse keyframes) extracted from the video. </li>
-                <li>The corresponding 𝗮𝘂𝗱𝗶𝗼 𝘁𝗿𝗮𝗰𝗸 of the clip. </li>
-                <li>Built around the 𝗔𝗩𝗠𝗜𝗧(𝗔𝘂𝗱𝗶𝗼-𝗩𝗶𝘀𝘂𝗮𝗹 𝗠𝗼𝗺𝗲𝗻𝘁𝘀 𝗶𝗻 𝗧𝗶𝗺𝗲) 𝗱𝗮𝘁𝗮𝘀𝗲𝘁, a 𝗺𝘂𝗹𝘁𝗶-𝗰𝗹𝗮𝘀𝘀, 𝗮𝘂𝗱𝗶𝗼-𝘃𝗶𝘀𝘂𝗮𝗹 𝗯𝗲𝗻𝗰𝗵𝗺𝗮𝗿𝗸. </li>
-                <li>Frameworks were evaluated across 𝟰 𝗲𝘃𝗮𝗹𝘂𝗮𝘁𝗶𝗼𝗻 𝗺𝗲𝘁𝗿𝗶𝗰𝘀 - 𝗥𝗲𝗰𝗮𝗹𝗹@𝗞, 𝗠𝗦𝗘, 𝗖𝗼𝘀𝗶𝗻𝗲 𝗦𝗶𝗺𝗶𝗹𝗮𝗿𝗶𝘁𝘆 𝗮𝗻𝗱 𝗠𝗲𝗱𝗶𝗮𝗻 𝗥𝗮𝗻𝗸 (𝗠𝗲𝗱𝗥).</li>
-                <li>Baselines implemented were 𝗖𝗹𝗮𝘀𝘀-𝗠𝗲𝗮𝗻 𝗳𝗹𝗼𝗼𝗿, 𝗡𝗮𝗶𝘃𝗲 𝗟𝗮𝘁𝗲 𝗙𝘂𝘀𝗶𝗼𝗻, 𝗔𝘂𝗱𝗶𝗼𝗖𝗟𝗜𝗣 (𝗢𝗽𝗲𝗻𝗔𝗜) and 𝗜𝗺𝗮𝗴𝗲𝗕𝗶𝗻𝗱 (𝗠𝗲𝘁𝗮 𝗔𝗜).</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+  <h2 className="text-2xl font-bold text-white tracking-tight">Featured Projects</h2>
+  <div className="space-y-8">
+    <div className="group relative border-l-2 border-slate-800 pl-6 space-y-3 hover:border-teal-500/50 transition-colors">
+      
+      <h3 className="text-lg font-semibold text-white group-hover:text-teal-400 transition-colors">
+        <a 
+          href="https://github.com/silver0cloud/avavs-dtu" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="inline-flex items-center gap-1.5 hover:underline decoration-teal-500/40 underline-offset-4"
+        >
+          AVAVS - Audio Visual Approximation of Video Semantic Space  
+          <svg className="w-3.5 h-3.5 text-slate-500 group-hover:text-teal-400 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          </svg>
+        </a>
+      </h3>
 
+      <div className="flex flex-wrap gap-1.5">
+        {['Python', 'Scikit-Learn', 'PyTorch', 'TFlow', 'ImageBind', 'CLIP', 'AudioCLIP'].map((t) => (
+          <span key={t} className="text-[11px] font-mono bg-slate-900 px-2 py-0.5 rounded text-slate-400">
+            {t}
+          </span>
+        ))}
+      </div>
+      
+      <ul className="text-sm text-slate-400 space-y-1.5 list-disc list-inside">
+        <h4 className="font-semibold text-slate-300 mb-1">Designed a 𝗺𝘂𝗹𝘁𝗶𝗺𝗼𝗱𝗮𝗹 𝗿𝗲𝗽𝗿𝗲𝘀𝗲𝗻𝘁𝗮𝘁𝗶𝗼𝗻 𝗹𝗲𝗮𝗿𝗻𝗶𝗻𝗴 𝗳𝗿𝗮𝗺𝗲𝘄𝗼𝗿𝗸 that determines whether the 𝘀𝗲𝗺𝗮𝗻𝘁𝗶𝗰 𝗲𝗺𝗯𝗲𝗱𝗱𝗶𝗻𝗴 of a 𝗰𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝘃𝗶𝗱𝗲𝗼 𝘀𝗲𝗾𝘂𝗲𝗻𝗰𝗲 can be accurately approximated using - </h4>
+        <li>A 𝘀𝗶𝗻𝗴𝗹𝗲 𝘀𝘁𝗮𝘁𝗶𝗰 𝘃𝗶𝘀𝘂𝗮𝗹 𝗳𝗿𝗮𝗺𝗲 (or sparse keyframes) extracted from the video. </li>
+        <li>The corresponding 𝗮𝘂𝗱𝗶𝗼 𝘁𝗿𝗮𝗰𝗸 of the clip. </li>
+        <li>Built around the 𝗔𝗩𝗠𝗜𝗧(𝗔𝘂𝗱𝗶𝗼-𝗩𝗶𝘀𝘂𝗮𝗹 𝗠𝗼𝗺𝗲𝗻𝘁𝘀 𝗶𝗻 𝗧𝗶𝗺𝗲) 𝗱𝗮𝘁𝗮𝘀𝗲𝘁, a 𝗺𝘂𝗹𝘁𝗶-𝗰𝗹𝗮𝘀𝘀, 𝗮𝘂𝗱𝗶𝗼-𝘃𝗶𝘀𝘂𝗮𝗹 𝗯𝗲𝗻𝗰𝗵𝗺𝗮𝗿𝗸. </li>
+        <li>Frameworks were evaluated across 𝟰 𝗲𝘃𝗮𝗹𝘂𝗮𝘁𝗶𝗼𝗻 𝗺𝗲𝘁𝗿𝗶𝗰𝘀 - 𝗥𝗲𝗰𝗮𝗹𝗹@𝗞, 𝗠𝗦𝗘, 𝗖𝗼𝘀𝗶𝗻𝗲 𝗦𝗶𝗺𝗶𝗹𝗮𝗿𝗶𝘁𝘆 𝗮𝗻𝗱 𝗠𝗲𝗱𝗶𝗮𝗻 𝗥𝗮𝗻𝗸 (𝗠𝗲𝗱𝗥).</li>
+        <li>Baselines implemented were 𝗖𝗹𝗮𝘀𝘀-𝗠𝗲𝗮𝗻 𝗳𝗹𝗼𝗼𝗿, 𝗡𝗮𝗶𝘃𝗲 𝗟𝗮𝘁𝗲 𝗙𝘂𝘀𝗶𝗼𝗻, 𝗔𝘂𝗱𝗶𝗼𝗖𝗟𝗜𝗣 (𝗢𝗽𝗲𝗻𝗔𝗜) and 𝗜𝗺𝗮𝗴𝗲𝗕𝗶𝗻𝗱 (𝗠𝗲𝘁𝗮 𝗔𝗜).</li>
+      </ul>
+
+    </div>
+  </div>
+</section>
         {/* 4. GITHUB ACTIVITY WIDGET */}
 
         {/* FOOTER */}
