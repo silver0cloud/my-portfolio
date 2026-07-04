@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link'; 
 
 export default function Page() {
-  const githubUsername = "your-github-username"; // Change to your GitHub user
+  const githubUsername = "silver0lcloud"; // Change to your GitHub user
 
   return (
     <div className="min-h-screen bg-[#0b0f19] text-slate-200 font-sans antialiased selection:bg-teal-500/30">
@@ -13,12 +13,9 @@ export default function Page() {
         {/* 1. HERO SECTION */}
         <section className="space-y-4">
           <div className="flex items-center space-x-4">
-            <h1 className="text-4xl font-bold tracking-tight text-white">Your Name</h1>
-            <span className="px-2.5 py-0.5 text-xs font-medium bg-teal-500/10 text-teal-400 rounded-full border border-teal-500/20">
-              Available for roles
-            </span>
+            <h1 className="text-4xl font-bold tracking-tight text-white">Yasir Farooqui</h1>
           </div>
-          <p className="text-xl text-slate-400 font-medium">AI/ML & Backend Developer</p>
+          <p className="text-xl text-slate-400 font-medium">AI/ML Engineer</p>
           <p className="text-slate-400 leading-relaxed max-w-2xl">
             I build production-ready AI/ML pipelines, custom LLM solutions, and full-stack architectures. 
           </p>
@@ -35,22 +32,22 @@ export default function Page() {
           {/* Social Links (Using Raw Inline SVGs to guarantee zero import errors) */}
           <div className="flex space-x-5 pt-4 text-slate-400 items-center">
             {/* GitHub */}
-            <Link href={`https://github.com/${githubUsername}`} target="_blank" className="hover:text-white transition-colors">
+            <Link href={`https://github.com/${silver0cloud}`} target="_blank" className="hover:text-white transition-colors">
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
             </Link>
             
             {/* LinkedIn */}
-            <Link href="https://linkedin.com" target="_blank" className="hover:text-white transition-colors">
+            <Link href="https://www.linkedin.com/in/yasir-farooqui-201a83376" target="_blank" className="hover:text-white transition-colors">
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
             </Link>
             
             {/* Mail */}
-            <Link href="mailto:your@email.com" className="hover:text-white transition-colors">
+            <Link href="farooquiyasir12@gmail.com" className="hover:text-white transition-colors">
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
             </Link>
             
             {/* Resume File link */}
-            <Link href="#" className="inline-flex items-center space-x-1.5 hover:text-white transition-colors text-sm font-medium">
+            <Link href="https://drive.google.com/file/d/1772iL-uKzXwVaalYMGvxnlKQrzKdV3ZV/view" className="inline-flex items-center space-x-1.5 hover:text-white transition-colors text-sm font-medium">
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
               <span>Resume</span>
             </Link>
