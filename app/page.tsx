@@ -107,8 +107,25 @@ export default function Page() {
       {/* STICKY NAV */}
       <header className="sticky top-0 z-50 backdrop-blur-md bg-black/70 border-b border-white/5">
         <nav className="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
-          <a href="#top" className="text-sm font-semibold text-white tracking-tight hover:text-teal-400 transition-colors">
-            Yasir
+          <a href="#top" className="flex items-center group">
+            <div className="w-8 h-8 rounded-full overflow-hidden border border-white/15 bg-white/5 flex items-center justify-center group-hover:border-teal-500/50 transition-colors">
+              {/* Drop your photo at /public/avatar.jpg — falls back to initials if missing */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/avatar.jpg"
+                alt="Yasir Farooqui"
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  target.style.display = "none";
+                  const fallback = target.nextElementSibling as HTMLElement | null;
+                  if (fallback) fallback.style.display = "flex";
+                }}
+              />
+              <span className="hidden w-full h-full items-center justify-center text-[11px] font-semibold text-slate-300">
+                Yasir Farooqui 
+              </span>
+            </div>
           </a>
           <div className="hidden sm:flex items-center gap-6 text-sm text-slate-400">
             {NAV_LINKS.map((l) => (
