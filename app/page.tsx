@@ -112,7 +112,7 @@ export default function Page() {
               {/* Drop your photo at /public/avatar.jpg — falls back to initials if missing */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/avatar.jpg"
+                src="/avatar.jpeg"
                 alt="Yasir Farooqui"
                 className="w-full h-full object-cover"
                 onError={(e) => {
