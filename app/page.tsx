@@ -275,7 +275,7 @@ export default function Page() {
           <div className="group relative border-l-2 border-white/10 pl-6 space-y-3 hover:border-teal-500/50 transition-colors">
                 <h3 className="text-lg font-semibold text-white group-hover:text-teal-400 transition-colors">
                   <a
-                    href="https://github.com/silver0cloud/avavs-dtu"
+                    href="https://github.com/silver0cloud/ResilientX-Hackathon"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 hover:underline decoration-teal-500/40 underline-offset-4"
