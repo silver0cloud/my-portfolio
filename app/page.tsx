@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 /** Wraps children and fades/slides them in the first time they scroll into view. */
@@ -101,32 +101,53 @@ const EXPERTISE = [
 
 export default function Page() {
   const githubUsername = "silver0cloud"; // Change to your GitHub user
+  const [avatarOpen, setAvatarOpen] = useState(false);
+  const [avatarMissing, setAvatarMissing] = useState(false);
+
+  useEffect(() => {
+    if (!avatarOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setAvatarOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [avatarOpen]);
 
   return (
     <div className="min-h-screen bg-black text-slate-200 font-sans antialiased selection:bg-teal-500/30">
       {/* STICKY NAV */}
       <header className="sticky top-0 z-50 backdrop-blur-md bg-black/70 border-b border-white/5">
         <nav className="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
-          <a href="#top" className="flex items-center group">
-            <div className="w-8 h-8 rounded-full overflow-hidden border border-white/15 bg-white/5 flex items-center justify-center group-hover:border-teal-500/50 transition-colors">
-              {/* Drop your photo at /public/avatar.jpg — falls back to initials if missing */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/avatar.jpeg"
-                alt="Yasir Farooqui"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  const target = e.currentTarget;
-                  target.style.display = "none";
-                  const fallback = target.nextElementSibling as HTMLElement | null;
-                  if (fallback) fallback.style.display = "flex";
-                }}
-              />
-              <span className="hidden w-full h-full items-center justify-center text-[11px] font-semibold text-slate-300">
-                Yasir Farooqui 
-              </span>
-            </div>
-          </a>
+          <button
+            type="button"
+            onClick={() => !avatarMissing && setAvatarOpen(true)}
+            aria-label="View profile picture"
+            className={`w-8 h-8 rounded-full overflow-hidden border border-white/15 bg-white/5 flex items-center justify-center transition-colors ${
+              avatarMissing ? "cursor-default" : "hover:border-teal-500/50 cursor-pointer"
+            }`}
+          >
+            {/* Drop your photo at /public/avatar.jpeg — falls back to initials if missing */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/avatar.jpeg"
+              alt="Yasir Farooqui"
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                const target = e.currentTarget;
+                target.style.display = "none";
+                const fallback = target.nextElementSibling as HTMLElement | null;
+                if (fallback) fallback.style.display = "flex";
+                setAvatarMissing(true);
+              }}
+            />
+            <span className="hidden w-full h-full items-center justify-center text-[11px] font-semibold text-slate-300">
+              YF
+            </span>
+          </button>
           <div className="hidden sm:flex items-center gap-6 text-sm text-slate-400">
             {NAV_LINKS.map((l) => (
               <a key={l.href} href={l.href} className="hover:text-white transition-colors">
@@ -376,6 +397,39 @@ resilience score for 10 countries.</li>
           © {new Date().getFullYear()} Yasir Farooqui
         </footer>
       </main>
+
+      {/* AVATAR LIGHTBOX */}
+      {avatarOpen && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center px-6"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Enlarged profile picture"
+          onClick={() => setAvatarOpen(false)}
+        >
+          <div className="absolute inset-0 bg-black/70 backdrop-blur-md animate-[fadeIn_0.25s_ease-out]" />
+
+          <button
+            type="button"
+            onClick={() => setAvatarOpen(false)}
+            aria-label="Close"
+            className="absolute top-5 right-5 w-9 h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors z-10"
+          >
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/avatar.jpeg"
+            alt="Yasir Farooqui — enlarged"
+            onClick={(e) => e.stopPropagation()}
+            className="relative z-10 max-w-[80vw] max-h-[80vh] rounded-2xl border border-white/10 shadow-2xl shadow-black/60 object-contain animate-[scaleIn_0.25s_cubic-bezier(0.16,1,0.3,1)]"
+          />
+        </div>
+      )}
     </div>
   );
 }
