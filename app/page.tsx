@@ -262,13 +262,13 @@ export default function Page() {
 
                 <ul className="text-sm text-slate-400 space-y-1.5 list-disc list-inside">
                   <h4 className="font-semibold text-slate-300 mb-1">
-                    Designed a 𝗺𝘂𝗹𝘁𝗶𝗺𝗼𝗱𝗮𝗹 𝗿𝗲𝗽𝗿𝗲𝘀𝗲𝗻𝘁𝗮𝘁𝗶𝗼𝗻 𝗹𝗲𝗮𝗿𝗻𝗶𝗻𝗴 𝗳𝗿𝗮𝗺𝗲𝘄𝗼𝗿𝗸 that determines whether the 𝘀𝗲𝗺𝗮𝗻𝘁𝗶𝗰 𝗲𝗺𝗯𝗲𝗱𝗱𝗶𝗻𝗴 of a 𝗰𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝘃𝗶𝗱𝗲𝗼 𝘀𝗲𝗾𝘂𝗲𝗻𝗰𝗲 can be accurately approximated using -
+                    Designed a multimodal representation learning framework that determines whether the 𝘀𝗲𝗺𝗮𝗻𝘁𝗶𝗰 𝗲𝗺𝗯𝗲𝗱𝗱𝗶𝗻𝗴 of a 𝗰𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝘃𝗶𝗱𝗲𝗼 𝘀𝗲𝗾𝘂𝗲𝗻𝗰𝗲 can be accurately approximated using -
                   </h4>
-                  <li>A 𝘀𝗶𝗻𝗴𝗹𝗲 𝘀𝘁𝗮𝘁𝗶𝗰 𝘃𝗶𝘀𝘂𝗮𝗹 𝗳𝗿𝗮𝗺𝗲 (or sparse keyframes) extracted from the video.</li>
-                  <li>The corresponding 𝗮𝘂𝗱𝗶𝗼 𝘁𝗿𝗮𝗰𝗸 of the clip.</li>
-                  <li>Built around the 𝗔𝗩𝗠𝗜𝗧(𝗔𝘂𝗱𝗶𝗼-𝗩𝗶𝘀𝘂𝗮𝗹 𝗠𝗼𝗺𝗲𝗻𝘁𝘀 𝗶𝗻 𝗧𝗶𝗺𝗲) 𝗱𝗮𝘁𝗮𝘀𝗲𝘁, a 𝗺𝘂𝗹𝘁𝗶-𝗰𝗹𝗮𝘀𝘀, 𝗮𝘂𝗱𝗶𝗼-𝘃𝗶𝘀𝘂𝗮𝗹 𝗯𝗲𝗻𝗰𝗵𝗺𝗮𝗿𝗸.</li>
-                  <li>Frameworks were evaluated across 𝟰 𝗲𝘃𝗮𝗹𝘂𝗮𝘁𝗶𝗼𝗻 𝗺𝗲𝘁𝗿𝗶𝗰𝘀 - 𝗥𝗲𝗰𝗮𝗹𝗹@𝗞, 𝗠𝗦𝗘, 𝗖𝗼𝘀𝗶𝗻𝗲 𝗦𝗶𝗺𝗶𝗹𝗮𝗿𝗶𝘁𝘆 𝗮𝗻𝗱 𝗠𝗲𝗱𝗶𝗮𝗻 𝗥𝗮𝗻𝗸 (𝗠𝗲𝗱𝗥).</li>
-                  <li>Baselines implemented were 𝗖𝗹𝗮𝘀𝘀-𝗠𝗲𝗮𝗻 𝗳𝗹𝗼𝗼𝗿, 𝗡𝗮𝗶𝘃𝗲 𝗟𝗮𝘁𝗲 𝗙𝘂𝘀𝗶𝗼𝗻, 𝗔𝘂𝗱𝗶𝗼𝗖𝗟𝗜𝗣 (𝗢𝗽𝗲𝗻𝗔𝗜) and 𝗜𝗺𝗮𝗴𝗲𝗕𝗶𝗻𝗱 (𝗠𝗲𝘁𝗮 𝗔𝗜).</li>
+                  <li>A single visual frame (or sparse keyframes) extracted from the video.</li>
+                  <li>The corresponding audio track of the clip.</li>
+                  <li>Built around the AVMIT(Audio-Visual Moments in Time) dataset, a multi-class, audio-visual benchmark.</li>
+                  <li>Frameworks were evaluated across 4 evaluation metrics - Recall@K, MSE, Cosine Similarity and Median Rank(MedR).</li>
+                  <li>Baselines implemented were Class-Mean floor, Naive Late Fusion, AudioCLIP(OpenAI), ImageBind(Meta AI).</li>
                 </ul>
               </div>
 
@@ -312,7 +312,7 @@ resilience score for 10 countries.</li>
         </Reveal>
 
         {/* 5. EXPERIENCE — placeholder section, edit with your real roles */}
-        <Reveal>
+        {/* <Reveal>
           <section id="experience" className="space-y-6 scroll-mt-20">
             <h2 className="text-2xl font-bold text-white tracking-tight">Experience</h2>
             <div className="space-y-6">
@@ -328,7 +328,7 @@ resilience score for 10 countries.</li>
               </div>
             </div>
           </section>
-        </Reveal>
+        </Reveal>*/}
 
         {/* 6. EDUCATION — placeholder, edit with your real details */}
         <Reveal>
