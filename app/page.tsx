@@ -421,13 +421,18 @@ resilience score for 10 countries.</li>
             </svg>
           </button>
 
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/avatar.jpeg"
-            alt="Yasir Farooqui — enlarged"
+          <div
+            className="relative z-10 flex flex-col items-center gap-3"
             onClick={(e) => e.stopPropagation()}
-            className="relative z-10 max-w-[80vw] max-h-[80vh] rounded-2xl border border-white/10 shadow-2xl shadow-black/60 object-contain animate-[scaleIn_0.25s_cubic-bezier(0.16,1,0.3,1)]"
-          />
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/avatar.jpeg"
+              alt="Yasir Farooqui — enlarged"
+              className="max-w-[50vw] max-h-[50vh] rounded-2xl border border-white/10 shadow-2xl shadow-black/60 object-contain animate-[scaleIn_0.25s_cubic-bezier(0.16,1,0.3,1)]"
+            />
+            <p className="text-sm text-slate-400 font-sans">This is Me</p>
+          </div>
         </div>
       )}
     </div>
