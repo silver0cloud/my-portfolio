@@ -431,7 +431,6 @@ resilience score for 10 countries.</li>
               alt="Yasir Farooqui — enlarged"
               className="max-w-[50vw] max-h-[50vh] rounded-2xl border border-white/10 shadow-2xl shadow-black/60 object-contain animate-[scaleIn_0.25s_cubic-bezier(0.16,1,0.3,1)]"
             />
-            <p className="text-sm text-slate-400 font-sans">This is Me</p>
           </div>
         </div>
       )}
