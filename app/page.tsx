@@ -78,7 +78,7 @@ const EXPERTISE = [
   },
   {
     title: "MLOps & Cloud Pipelines",
-    desc: "Moving models from notebooks to production with Docker, FastAPI, and automated CI/CD pipelines on AWS.",
+    desc: "Moving models from notebooks to production with Docker, FastAPI, and automated CI/CD pipelines.",
     icon: (
       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
@@ -175,14 +175,14 @@ export default function Page() {
               Yasir Farooqui
             </h1>
           </div>
-          <p className="text-xl text-slate-400 font-medium">AI/ML Engineer</p>
+          <p className="text-xl text-slate-400 font-medium">AI Engineer</p>
           <p className="text-slate-400 leading-relaxed max-w-2xl">
-            I build production-ready AI/ML pipelines, custom LLM solutions, and full-stack architectures.
+            Translating problems into production-ready AI/ML pipelines, custom LLM solutions, and full-stack architectures.
           </p>
 
           {/* Tech Badges */}
           <div className="flex flex-wrap gap-2 pt-2">
-            {["Python", "PyTorch", "Docker", "FastAPI", "RAG", "LLMs", "AWS"].map((tech) => (
+            {["Python", "PyTorch", "API Design", "RAG", "LLMs", "VLMs", "Docker"].map((tech) => (
               <span
                 key={tech}
                 className="px-3 py-1 text-xs font-mono bg-white/5 text-slate-300 rounded-md border border-white/10 hover:border-teal-500/40 hover:text-teal-300 transition-colors"
@@ -283,13 +283,13 @@ export default function Page() {
 
                 <ul className="text-sm text-slate-400 space-y-1.5 list-disc list-inside">
                   <h4 className="font-semibold text-slate-300 mb-1">
-                    Designed a multimodal representation learning framework that determines whether the 𝘀𝗲𝗺𝗮𝗻𝘁𝗶𝗰 𝗲𝗺𝗯𝗲𝗱𝗱𝗶𝗻𝗴 of a 𝗰𝗼𝗺𝗽𝗹𝗲𝘁𝗲 𝘃𝗶𝗱𝗲𝗼 𝘀𝗲𝗾𝘂𝗲𝗻𝗰𝗲 can be accurately approximated using -
+                    Designed a multimodal representation learning framework that determines whether the semantic embedding of a complete video sequence can be accurately approximated using -
                   </h4>
                   <li>A single visual frame (or sparse keyframes) extracted from the video.</li>
                   <li>The corresponding audio track of the clip.</li>
-                  <li>Built around the AVMIT(Audio-Visual Moments in Time) dataset, a multi-class, audio-visual benchmark.</li>
-                  <li>Frameworks were evaluated across 4 evaluation metrics - Recall@K, MSE, Cosine Similarity and Median Rank(MedR).</li>
-                  <li>Baselines implemented were Class-Mean floor, Naive Late Fusion, AudioCLIP(OpenAI), ImageBind(Meta AI).</li>
+                  <h6>Built around the AVMIT(Audio-Visual Moments in Time) dataset, a multi-class, audio-visual benchmark.</h6>
+                  <h6>Frameworks were evaluated across 4 evaluation metrics - Recall@K, MSE, Cosine Similarity and Median Rank(MedR).</h6>
+                  <h6>Baselines implemented were Class-Mean floor, Naive Late Fusion, AudioCLIP(OpenAI), ImageBind(Meta AI).</h6>
                 </ul>
               </div>
 
