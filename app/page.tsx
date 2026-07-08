@@ -368,10 +368,10 @@ resilience score for 10 countries.</li>
           <section>
             <div className="p-5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-teal-500/30 transition-colors">
               <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <h3 className="font-semibold text-white">Cambridge School Srinivaspuri</h3>
+                <h3 className="font-semibold text-white">Senior Secondary School</h3>
                 <span className="text-xs font-mono text-slate-500">May 2025</span>
               </div>
-              <p className="text-sm text-slate-400 mt-1">New Delhi, Delhi</p>
+              <p className="text-sm text-slate-400 mt-1">Cambridge School Srinivaspuri, New Delhi</p>
               <p className="text-sm text-slate-400 mt-1">Percentage: 91.6</p>
             </div>
           </section>
