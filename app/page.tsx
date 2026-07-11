@@ -101,13 +101,18 @@ const EXPERTISE = [
 
 export default function Page() {
   const githubUsername = "silver0cloud"; // Change to your GitHub user
+  const resumeFileId = "1772iL-uKzXwVaalYMGvxnlKQrzKdV3ZV";
   const [avatarOpen, setAvatarOpen] = useState(false);
   const [avatarMissing, setAvatarMissing] = useState(false);
+  const [resumeOpen, setResumeOpen] = useState(false);
 
   useEffect(() => {
-    if (!avatarOpen) return;
+    if (!avatarOpen && !resumeOpen) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setAvatarOpen(false);
+      if (e.key === "Escape") {
+        setAvatarOpen(false);
+        setResumeOpen(false);
+      }
     };
     window.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
@@ -115,7 +120,7 @@ export default function Page() {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
-  }, [avatarOpen]);
+  }, [avatarOpen, resumeOpen]);
 
   return (
     <div className="min-h-screen bg-black text-slate-200 font-sans antialiased selection:bg-teal-500/30">
@@ -155,13 +160,13 @@ export default function Page() {
               </a>
             ))}
           </div>
-          <Link
-            href="https://drive.google.com/file/d/1772iL-uKzXwVaalYMGvxnlKQrzKdV3ZV/view"
-            target="_blank"
+          <button
+            type="button"
+            onClick={() => setResumeOpen(true)}
             className="text-sm font-medium px-3 py-1.5 rounded-full border border-white/10 text-slate-300 hover:text-white hover:border-teal-500/50 transition-colors"
           >
             Resume
-          </Link>
+          </button>
         </nav>
       </header>
 
@@ -206,14 +211,14 @@ export default function Page() {
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
             </Link>
 
-            <Link
-              href="https://drive.google.com/file/d/1772iL-uKzXwVaalYMGvxnlKQrzKdV3ZV/view"
-              target="_blank"
+            <button
+              type="button"
+              onClick={() => setResumeOpen(true)}
               className="inline-flex items-center space-x-1.5 hover:text-white transition-colors text-sm font-medium"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
               <span>Resume</span>
-            </Link>
+            </button>
           </div>
         </section>
 
@@ -430,6 +435,45 @@ resilience score for 10 countries.</li>
               src="/avatar.jpeg"
               alt="Yasir Farooqui — enlarged"
               className="max-w-[50vw] max-h-[50vh] rounded-2xl border border-white/10 shadow-2xl shadow-black/60 object-contain animate-[scaleIn_0.25s_cubic-bezier(0.16,1,0.3,1)]"
+            />
+          </div>
+        </div>
+      )}
+
+      {/* RESUME VIEWER */}
+      {resumeOpen && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center px-4 sm:px-6"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Resume viewer"
+          onClick={() => setResumeOpen(false)}
+        >
+          <div className="absolute inset-0 bg-black/70 backdrop-blur-md animate-[fadeIn_0.25s_ease-out]" />
+
+          <div
+            className="relative z-10 w-full max-w-3xl h-[85vh] rounded-2xl border border-white/10 bg-black shadow-2xl shadow-black/60 overflow-hidden animate-[scaleIn_0.25s_cubic-bezier(0.16,1,0.3,1)]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between px-4 h-12 border-b border-white/10 bg-white/[0.03]">
+              <span className="text-sm font-medium text-slate-300">Resume</span>
+              <button
+                type="button"
+                onClick={() => setResumeOpen(false)}
+                aria-label="Close"
+                className="w-8 h-8 rounded-full flex items-center justify-center text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors"
+              >
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+            <iframe
+              src={`https://drive.google.com/file/d/${resumeFileId}/preview`}
+              className="w-full h-[calc(100%-3rem)]"
+              allow="autoplay"
+              title="Resume"
             />
           </div>
         </div>
