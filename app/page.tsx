@@ -348,8 +348,8 @@ resilience score for 10 countries.</h6>
                 </div>
                 <p className="text-sm text-teal-400/90 mt-0.5">180DC Consulting Society, Jamia Millia Islamia </p>
                 <p className="text-sm text-slate-400 mt-2 leading-relaxed">
-                  Participated in 180DC Nirvana Startup Competition, achieved a position in the Top 5 colleges.\n
-                  Pitch idea was of a house cleaning startup - NeatNest, ideated a robust growth model which focused on having optimal MRR, CAC and LTV.
+                  <h6>Participated in 180DC Nirvana Startup Competition, achieved a position in the Top 5 colleges.</h6>
+                  <h6>Pitch idea was of a house cleaning startup - NeatNest, ideated a robust growth model which focused on having optimal MRR, CAC and LTV.</h6>
                 </p>
               </div>
             </div>
