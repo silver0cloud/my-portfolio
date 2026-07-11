@@ -324,13 +324,12 @@ export default function Page() {
                 </div>
 
                 <ul className="text-sm text-slate-400 space-y-1.5 list-disc list-inside">
-                  <li>Developed a full-stack RAG web application with Streamlit as the frontend</li>
-                  <li>Made an end-to-end Retreival Augmented Generation (RAG) architecture with FAISS vector DB</li>
-                  <li>Used DeepSeek-R1 model hosted on Ollama to run the system</li>
-                  <li>Implemented PDF parsing and real-time data fetching APIs for data extraction and pre-processing</li>
-                  <li>HNSW and BM25 search algorithm were added to reduce DB search latency and to make query handling efficient</li>
-                  <li>Supervised ML algorithms- Decision Trees, SVMs were used for training. SHAP metric was used to generate
-resilience score for 10 countries.</li>
+                  <h5>Developed a full-stack RAG web application with Streamlit as the frontend with FAISS vector DB.</h5>
+                  <h6>Used DeepSeek-R1 model hosted on Ollama to run the system</h6>
+                  <h6>Implemented PDF parsing and real-time data fetching APIs for data extraction and pre-processing.</h6>
+                  <h6>HNSW and BM25 search algorithm were added to reduce DB search latency and to make query handling efficient.</h6>
+                  <h6>Supervised ML algorithms- Decision Trees, SVMs were used for training. SHAP metric was used to generate
+resilience score for 10 countries.</h6>
                 </ul>
               </div>
             </div>
@@ -338,23 +337,24 @@ resilience score for 10 countries.</li>
         </Reveal>
 
         {/* 5. EXPERIENCE — placeholder section, edit with your real roles */}
-        {/* <Reveal>
+        <Reveal>
           <section id="experience" className="space-y-6 scroll-mt-20">
             <h2 className="text-2xl font-bold text-white tracking-tight">Experience</h2>
             <div className="space-y-6">
               <div className="p-5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-teal-500/30 transition-colors">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <h3 className="font-semibold text-white">Add your role here</h3>
-                  <span className="text-xs font-mono text-slate-500">Month Year - Present</span>
+                  <h3 className="font-semibold text-white">Contributor</h3>
+                  <span className="text-xs font-mono text-slate-500">May 2026 - May 2026</span>
                 </div>
-                <p className="text-sm text-teal-400/90 mt-0.5">Organization Name</p>
+                <p className="text-sm text-teal-400/90 mt-0.5">180DC Consulting Society, Jamia Millia Islamia </p>
                 <p className="text-sm text-slate-400 mt-2 leading-relaxed">
-                  Short description of what you did — impact, tools used, and scale.
+                  Participated in 180DC Nirvana Startup Competition, achieved position in Top 5 colleges.
+                  Pitch idea was of a house cleaning startup - NeatNest, ideated a robust growth model which focused on having optimal MRR, CAC and LTV.
                 </p>
               </div>
             </div>
           </section>
-        </Reveal>*/}
+        </Reveal>
 
         {/* 6. EDUCATION — placeholder, edit with your real details */}
         <Reveal>
