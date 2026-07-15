@@ -287,9 +287,9 @@ export default function Page() {
                 </div>
 
                 <ul className="text-sm text-slate-400 space-y-1.5 list-disc list-inside">
-                  <h4 className="font-semibold text-slate-300 mb-1">
+                  <h5 className="font-semibold text-slate-300 mb-1">
                     Designed a multimodal representation learning framework that determines whether the semantic embedding of a complete video sequence can be accurately approximated using -
-                  </h4>
+                  </h5>
                   <li>A single visual frame (or sparse keyframes) extracted from the video.</li>
                   <li>The corresponding audio track of the clip.</li>
                   <h6>Built around the AVMIT(Audio-Visual Moments in Time) dataset, a multi-class, audio-visual benchmark.</h6>
@@ -359,7 +359,9 @@ resilience score for 10 countries.</h6>
                 </div>
 
                 <ul className="text-sm text-slate-400 space-y-1.5 list-disc list-inside">
-                  <h5>Built a fully local, privacy-focused desktop application using a Tauri + React frontend and a FastAPI (Python) backend packaged as a native sidecar binary.</h5>
+                   <h5 className="font-semibold text-slate-300 mb-1">
+                    Built a fully local, privacy-focused desktop application using a Tauri + React frontend and a FastAPI (Python) backend packaged as a native sidecar binary.
+                  </h5>
                   <h6>Implemented zero-shot voice cloning and real-time streaming inference using the F5-TTS architecture (Diffusion Transformer + flow matching) operating at a native 24kHz sample rate.</h6>
                   <h6>Integrated PEFT LoRA adapters targeted at all linear layers of the DiT backbone to enable lightweight, local model training on consumer hardware.</h6>
                   <h6>Developed an automated audio pipeline incorporating real-time quality checks for clipping, noise, and silence.</h6>
