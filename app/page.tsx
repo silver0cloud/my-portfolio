@@ -332,6 +332,40 @@ export default function Page() {
 resilience score for 10 countries.</h6>
                 </ul>
               </div>
+              
+             <div className="group relative border-l-2 border-white/10 pl-6 space-y-3 hover:border-teal-500/50 transition-colors">
+                <h3 className="text-lg font-semibold text-white group-hover:text-teal-400 transition-colors">
+                  <a
+                    href="https://github.com/silver0cloud/Occano"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 hover:underline decoration-teal-500/40 underline-offset-4"
+                  >
+                    Occano - an open-source TTS Model 
+                    <svg className="w-3.5 h-3.5 text-slate-500 group-hover:text-teal-400 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M15 3h6v6"></path>
+                      <path d="M10 14 21 3"></path>
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    </svg>
+                  </a>
+                </h3>
+
+                <div className="flex flex-wrap gap-1.5">
+                  {["Python", "TypeScript", "FastAPI", "F5-TTS Model", "LoRA"].map((t) => (
+                    <span key={t} className="text-[11px] font-mono bg-white/5 px-2 py-0.5 rounded text-slate-400">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                <ul className="text-sm text-slate-400 space-y-1.5 list-disc list-inside">
+                  <h5>Built a fully local, privacy-focused desktop application using a Tauri + React frontend and a FastAPI (Python) backend packaged as a native sidecar binary.</h5>
+                  <h6>Implemented zero-shot voice cloning and real-time streaming inference using the F5-TTS architecture (Diffusion Transformer + flow matching) operating at a native 24kHz sample rate.</h6>
+                  <h6>Integrated PEFT LoRA adapters targeted at all linear layers of the DiT backbone to enable lightweight, local model training on consumer hardware.</h6>
+                  <h6>Developed an automated audio pipeline incorporating real-time quality checks for clipping, noise, and silence.</h6>
+                  <h6>Established low-latency, bidirectional WebSocket streams to handle live training loss metrics and chunk-based PCM16 audio streaming for real-time speech playback.</h6>
+                </ul>
+              </div>
             </div>
           </section>
         </Reveal>
