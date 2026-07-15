@@ -328,8 +328,7 @@ export default function Page() {
                   <h6>Used DeepSeek-R1 model hosted on Ollama to run the system</h6>
                   <h6>Implemented PDF parsing and real-time data fetching APIs for data extraction and pre-processing.</h6>
                   <h6>HNSW and BM25 search algorithm were added to reduce DB search latency and to make query handling efficient.</h6>
-                  <h6>Supervised ML algorithms- Decision Trees, SVMs were used for training. SHAP metric was used to generate
-resilience score for 10 countries.</h6>
+                  <h6>Supervised ML algorithms- Decision Trees, SVMs were used for training. SHAP metric was used to generate resilience score for 10 countries.</h6>
                 </ul>
               </div>
               
@@ -351,7 +350,7 @@ resilience score for 10 countries.</h6>
                 </h3>
 
                 <div className="flex flex-wrap gap-1.5">
-                  {["Python", "TypeScript", "FastAPI", "F5-TTS Model", "LoRA"].map((t) => (
+                  {["Python", "TypeScript", "FastAPI", "F5-TTS Model", "LoRA", "Tauri"].map((t) => (
                     <span key={t} className="text-[11px] font-mono bg-white/5 px-2 py-0.5 rounded text-slate-400">
                       {t}
                     </span>
