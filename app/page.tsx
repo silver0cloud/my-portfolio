@@ -325,7 +325,7 @@ export default function Page() {
 
                 <ul className="text-sm text-slate-400 space-y-1.5 list-disc list-inside">
                   <h5 className="font-semibold text-slate-300 mb-1">
-                    Built a lightweight RAG pipeline from scratch (<200 lines of Python/React) without LangChain or external vector databases, maximizing code clarity and latency visibility.
+                    Built a lightweight RAG pipeline from scratch without LangChain or external vector databases, maximizing code clarity and latency visibility.
                   </h5>
                   <h6>Implemented a handwritten TF-IDF and Cosine Similarity engine to vectorize and rank live documents based on query relevance.</h6>
                   <h6>Integrated NewsAPI to dynamically fetch, aggregate, and flatten current articles, bypassing LLM knowledge cutoffs with an active, searchable corpus.</h6>
