@@ -298,6 +298,43 @@ export default function Page() {
                 </ul>
               </div>
 
+            <div className="group relative border-l-2 border-white/10 pl-6 space-y-3 hover:border-teal-500/50 transition-colors">
+                <h3 className="text-lg font-semibold text-white group-hover:text-teal-400 transition-colors">
+                  <a
+                    href="https://github.com/silver0cloud/SimpleRAG"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 hover:underline decoration-teal-500/40 underline-offset-4"
+                  >
+                    SimpleRAG - Learn how to make your own RAG!
+                    <svg className="w-3.5 h-3.5 text-slate-500 group-hover:text-teal-400 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M15 3h6v6"></path>
+                      <path d="M10 14 21 3"></path>
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    </svg>
+                  </a>
+                </h3>
+
+                <div className="flex flex-wrap gap-1.5">
+                  {["Python", "JavaScript", "React", "RAG", "Gemini", "NewsAPI"].map((t) => (
+                    <span key={t} className="text-[11px] font-mono bg-white/5 px-2 py-0.5 rounded text-slate-400">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                <ul className="text-sm text-slate-400 space-y-1.5 list-disc list-inside">
+                  <h5 className="font-semibold text-slate-300 mb-1">
+                    Built a lightweight RAG pipeline from scratch (<200 lines of Python/React) without LangChain or external vector databases, maximizing code clarity and latency visibility.
+                  </h5>
+                  <h6>Implemented a handwritten TF-IDF and Cosine Similarity engine to vectorize and rank live documents based on query relevance.</h6>
+                  <h6>Integrated NewsAPI to dynamically fetch, aggregate, and flatten current articles, bypassing LLM knowledge cutoffs with an active, searchable corpus.</h6>
+                  <h6>Connected the pipeline to Gemini to synthesize structured, cited answers strictly from retrieved context, streaming responses token-by-token via SSE.</h6>
+                  <h6>Developed a full-stack FastAPI/React app featuring Vite dev proxies for local testing and multi-stage Docker builds with Nginx reverse-proxying for production.</h6>
+                </ul>
+              </div>
+
+
           <div className="group relative border-l-2 border-white/10 pl-6 space-y-3 hover:border-teal-500/50 transition-colors">
                 <h3 className="text-lg font-semibold text-white group-hover:text-teal-400 transition-colors">
                   <a
